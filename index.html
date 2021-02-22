@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor "AI"</title>
+    <script
+      src="https://kit.fontawesome.com/446d8d846b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header"><h1>Not Really Rock-Paper-Scissor AI</h1></header>
+    <div id="root">
+      <!-- <i class="far fa-hand-rock fa-9x"></i>
+      <i class="far fa-hand-paper fa-9x"></i>
+      <i class="far fa-hand-scissors fa-9x"></i> -->
+    </div>
+    <div id="controls">
+      <button id="player1" onclick="takeControl(this.id)">Take Control</button>
+      <button id="player2" onclick="takeControl(this.id)">Take Control</button>
+    </div>
+    <div id="play">
+      <button id="play" onclick="choose()">Play</button>
+    </div>
+    <div id="score">
+      <p id="playerOneScore"></p>
+      <p id="playerTwoScore"></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

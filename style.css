@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: deepskyblue;
+  font-family: monospace;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: xx-large;
+}
+
+#root {
+  margin: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#root div {
+  position: relative;
+  top: 0px;
+}
+
+#controls,
+#play {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#controls button,
+#play button {
+  font-size: xx-large;
+  padding: 5px 15px;
+  border: 2px solid black;
+  border-radius: 7.5px;
+}
+
+#score {
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: xx-large;
+}
