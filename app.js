@@ -148,16 +148,16 @@ let playGame = (id) => {
   let box2 = document.getElementById("1");
   let box3 = document.getElementById("2");
   if (box1.id == id) {
-    box2.className = "unused";
-    box3.className = "unused";
+    box2.remove();
+    box3.remove();
     // box1.setAttribute = ("onclick", "takeControl()");
   } else if (box2.id == id) {
-    box1.className = "unused";
-    box3.className = "unused";
+    box1.remove();
+    box3.remove();
     // box2.setAttribute = ("onclick", "takeControl()");
   } else {
-    box1.className = "unused";
-    box2.className = "unused";
+    box1.remove();
+    box2.remove();
     // box3.setAttribute = ("onclick", "takeControl()");
   }
   playerOneChoice = id;
@@ -170,7 +170,7 @@ let loseControl = (id) => {
   controlled.innerText = "Take Control";
   controlled.setAttribute("onclick", "takeControl(this.id)");
   playerOneBox.innerHTML = "";
-  playerOneBox.onclick = "";
+  playerOneBox.setAttribute("onclick", "");
   playerOneBox.className = choices[2];
 };
 
