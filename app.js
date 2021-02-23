@@ -69,35 +69,38 @@ let choose = () => {
     playerTwoChoice = playerChoose();
     let counter = 0;
     let counter2 = 0;
-    let timer2 = setInterval(function () {
-      counter2++;
-      if (counter2 % 100 === 0) {
-        hit = 0;
-      }
-      hit -= 1;
-      playerOneBox.style.top = hit + "px";
-      playerTwoBox.style.top = hit + "px";
-    }, 1);
-    let timer = setInterval(function () {
-      counter++;
-      if (counter === 3) {
-        document.getElementById(playerOneChoice).className = "";
-        playerOneBox.className = choices[playerOneChoice];
+    // // let timer2 = setInterval(function () {
+    //   counter2++;
+    //   if (counter2 % 100 === 0) {
+    //     hit = 0;
+    //   }
+    //   hit -= 1;
+    //   playerOneBox.style.top = hit + "px";
+    //   playerTwoBox.style.top = hit + "px";
+    // // }, 1);
+    // let timer = setInterval(function () {
+    //   counter++;
+    // if (counter === 3) {
 
-        playerTwoBox.className = choices[playerTwoChoice];
-        clearInterval(timer);
-        clearInterval(timer2);
-        hit = 0;
-        // console.log("hello");
-        playerOneBox.style.top = hit + "px";
-        playerTwoBox.style.top = hit + "px";
-        checkWinner();
-        playerOneBoxScore.innerText = "Player 1: " + playerOneScore;
-        playerTwoBoxScore.innerText = "Player 2: " + playerTwoScore;
-        playerOneBox.innerHTML = "";
-        // playerOneBox.setAttribute("onclick", "printChoices()"); SHIT IS BROKE, Does not work! Might be because of FontAwsomeicons
-      }
-    }, 400);
+    document.getElementById(playerOneChoice).className = "";
+    playerOneBox.className = choices[playerOneChoice];
+    playerOneBox.innerHTML = "";
+    console.log(playerOneChoice);
+    playerTwoBox.className = choices[playerTwoChoice];
+    // clearInterval(timer);
+    // clearInterval(timer2);
+    hit = 0;
+    // console.log("hello");
+    playerOneBox.style.top = hit + "px";
+    playerTwoBox.style.top = hit + "px";
+    checkWinner();
+    playerOneBoxScore.innerText = "Player 1: " + playerOneScore;
+    playerTwoBoxScore.innerText = "Player 2: " + playerTwoScore;
+    setTimeout(function () {
+      playerOneBox.setAttribute("onclick", "printChoices()");
+    }, 500);
+    // }
+    // }, 4000);
   }
 };
 
@@ -147,15 +150,15 @@ let playGame = (id) => {
   if (box1.id == id) {
     box2.className = "unused";
     box3.className = "unused";
-    box1.setAttribute = ("onclick", "takeControl()");
+    // box1.setAttribute = ("onclick", "takeControl()");
   } else if (box2.id == id) {
     box1.className = "unused";
     box3.className = "unused";
-    box2.setAttribute = ("onclick", "takeControl()");
+    // box2.setAttribute = ("onclick", "takeControl()");
   } else {
     box1.className = "unused";
     box2.className = "unused";
-    box3.setAttribute = ("onclick", "takeControl()");
+    // box3.setAttribute = ("onclick", "takeControl()");
   }
   playerOneChoice = id;
   choose();
